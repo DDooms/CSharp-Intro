@@ -1,0 +1,25 @@
+﻿employees:
+  - id: 1
+    name: John Doe
+    age: 30
+    department: Development
+    skills:
+      - C#
+      - .NET
+      - SQL
+  - id: 2
+    name: Jane Smith
+    age: 28
+    department: Design
+    skills:
+      - UI/UX Design
+      - Adobe Illustrator
+  - id: 3
+    name: Bob Johnson
+    age: 35
+    department: QA
+    skills:
+      - Manual Testing
+      - Test Automation
+
+# Adding comments
