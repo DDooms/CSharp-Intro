@@ -1,3 +1,4 @@
+using Moq;
 using MySchoolApp.MySchoolApp;
 
 namespace MySchoolApp.Test;
@@ -37,6 +38,32 @@ public class StudentTests
 
         // Act
         student.Study();
+
+        // Assert (no need for assertions here since it only writes to the console)
+    }
+    [TestMethod]
+    public void TestEnrollWithMoq()
+    {
+        // Arrange
+        var mockStudent = new Mock<IStudent>();
+
+        // Act
+        mockStudent.Object.Enroll("Math");
+
+        // Assert
+        Assert.AreEqual("Math", mockStudent.Object.Course);
+    }
+
+
+    [TestMethod]
+    public void TestStudyWithMoq()
+    {
+        // Arrange
+        var mockStudent = new Mock<IStudent>();
+        mockStudent.Setup(s => s.Study());
+
+        // Act
+        mockStudent.Object.Study();
 
         // Assert (no need for assertions here since it only writes to the console)
     }

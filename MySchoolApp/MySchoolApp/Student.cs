@@ -8,6 +8,15 @@ public class Student : IStudent
     public int Age { get; set; }
     public string Course { get; set; }
 
+    // Constructor to initialize properties with default values
+    public Student()
+    {
+        StudentId = 0;
+        Name = string.Empty;
+        Age = 0;
+        Course = string.Empty;
+    }
+    
     // Methods
     public void Enroll(string course)
     {
